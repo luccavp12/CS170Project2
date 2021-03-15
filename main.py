@@ -5,40 +5,30 @@ def leave_one_out_cross_validation():
     accuracy = random.random()
     return accuracy
 
-# with open('CS170_SMALLtestdata__31.txt', newline = '') as vals:
-#     val_reader = csv.reader(vals, delimiter='t')
-#     for val in val_reader:
-#         print(val)
-
-
-
+def feature_search(reader):
+    # size = 0
+    csvFileList = []
+    for row in reader:
+        csvFileList.append(row)
+    # for row in csvFileList:
+    #     print(row)
+    # print(csvFileList[0])
+    for i in range(len(csvFileList[0]) - 1):
+        print("On level", i + 1, "of the search tree")
 
 with open('CS170_SMALLtestdata__31.txt', 'r') as f:
     reader = csv.reader(f, delimiter=' ', skipinitialspace = True)
-    for row in reader:
-        print(row)
+    print(type(reader))
+    print(reader)
+    feature_search(reader)
+    # for row in reader:
+    #     print(row)
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-        # for val in row:
-        #     if val != '':
-        #         print(val)
-
-# def feature_search(data):
-#     for 
 
 # function  feature_search_demo(data)
  
@@ -46,5 +36,4 @@ with open('CS170_SMALLtestdata__31.txt', 'r') as f:
 #                                 #, i.e. the # of columns
 #     disp(['On the ',num2str(i),'th level of the search tree'])
 #   end
- 
 # end
