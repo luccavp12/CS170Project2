@@ -113,13 +113,18 @@ def feature_search(data):
         # current_set_of_features_features.append(current_set_of_features)
         print("")
     
-    print("current_set_of_features_features", current_set_of_features_features)
+    # print("current_set_of_features_features", current_set_of_features_features)
     for x in range(len(best_accuracy_so_far_list)):
         if best_accuracy_so_far_list[x] > overall_best:
                     overall_best = best_accuracy_so_far_list[x]
                     most_accurate_feature = x
 
-    print("highest accuracy was with:", current_set_of_features[0:most_accurate_feature], "with an accuracy of ", overall_best)
+    # print("current set of features:", current_set_of_features)
+    # print("most accurate feature:", most_accurate_feature)
+    print("highest accuracy was with: [ ", end='')
+    for item in current_set_of_features[:most_accurate_feature + 1]:
+        print(item,end=' ')
+    print("] with an accuracy of ", overall_best)
  
 if __name__ == '__main__':
     # data = pd.read_csv('CS170_SMALLtestdata__31.txt', delim_whitespace=True, header=None).values
