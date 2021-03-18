@@ -49,7 +49,7 @@ def leave_one_out_cross_validation(data, current_set_of_features, feature_to_add
         for j in range(size):
             # Compare all other instances to object_to_classify
             if i != j:
-                # Calculate the distance formula betweem object_to_classify and other object 'j'
+                # Calculate the distance formula between object_to_classify and other object 'j'
                 distance = math.sqrt(sum((object_to_classify - data2[j][1:]) ** 2))
                 # If you find a better distance, save it
                 if distance < nearest_neighbor_distance:
